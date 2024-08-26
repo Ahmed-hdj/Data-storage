@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway";
+    color: white;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 20px;
+    background-color: hsl(229, 57%, 11%);
+    height: 100vh;
+    background-image: url(images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 1875px;
+    background-position-y: 50vh;
+}
+
+.fylo {
+    width: 395px;
+    background-color: hsl(228, 56%, 26%);
+    height: 222px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-top-right-radius: 99px 134px;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+    border-top-left-radius: 13px;
+}
+
+
+.icon {
+    width: 54px;
+    height: 54px;
+    background-color: hsl(229, 57%, 11%);
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 10px;
+}
+
+.icon:first-child {
+    background-image: url(images/icon-document.svg);
+}
+
+.icon:nth-child(2) {
+    background-image: url(images/icon-folder.svg);
+}
+
+.icon:last-child {
+    background-image: url(images/icon-upload.svg);
+}
+
+.fylo>* {
+    margin-left: 40px;
+}
+
+.container {
+    display: flex;
+    gap: 15px;
+}
+
+img {
+    width: 139px;
+}
+
+.storage {
+    width: 579px;
+    background-color: hsl(228, 56%, 26%);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 165px;
+    margin-top: 56px;
+    border-radius: 13px;
+    position: relative;
+
+}
+
+.storage>* {
+    width: 85%;
+}
+
+.storage>div:first-of-type {
+    background-color: hsl(229, 57%, 11%);
+    height: 20px;
+    border-radius: 17px;
+    margin-bottom: 6px;
+    margin-top: 18px;
+    display: flex;
+
+}
+
+.storage div div {
+    width: 74%;
+    height: 66%;
+    border-radius: inherit;
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    align-self: center;
+    margin-left: 3px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.storage>div:nth-child(3) {
+    display: flex;
+    justify-content: space-between;
+}
+
+.storage div div::after {
+    content: "";
+    width: 10px;
+    height: 70%;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 2px;
+
+}
+
+.storage p {
+    font-weight: 300;
+}
+
+.storage span,
+.storage div:nth-child(3) p {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.storage>div:last-child {
+    position: absolute;
+    width: 216px;
+    height: 84px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -51px;
+    right: 44px;
+    background-color: white;
+    border-radius: 15px;
+
+}
+
+.storage>div:last-child p {
+    color: hsl(229, 7%, 55%);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.storage>div:last-child span {
+    color: hsl(229, 57%, 11%);
+    font-size: 56px;
+    vertical-align: middle;
+    margin-right: 12px;
+}
+
+.storage>div:last-child p::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -26px;
+    bottom: -33px;
+    border-left: 43px solid transparent;
+    border-top: 48px solid white;
+}
+
+.storage>p:first-child span {
+    font-size: 17px;
+}
+
+@media (min-width:375px) and (max-width:1439px) {
+    body {
+        flex-direction: column;
+        background-image: url(images/bg-mobile.png);
+        background-size: 145%;
+        background-position: unset;
+
+
+    }
+
+    .storage,
+    .fylo {
+        width: 90%;
+    }
+
+    .storage>div:last-child p::after {
+        border: none;
+    }
+
+    .storage>div:last-child {
+        left: 20%;
+        top: 75%;
+        width: 159px;
+        height: 46%;
+    }
+
+    .storage>div:last-child span {
+        font-size: 40px;
+        margin-right: 9px;
+    }
+
+    .storage>div:last-child p {
+        font-size: 12px;
+    }
+}
